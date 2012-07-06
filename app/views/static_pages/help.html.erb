@@ -1,2 +1,10 @@
-<h1>StaticPages#help</h1>
-<p>Find me in app/views/static_pages/help.html.erb</p>
+<% provide(:title, "Help") %>
+<!DOCTYPE html>
+<html>
+	<body>
+		<h1><%= yield(:title) %></h1>
+		<p>
+			This page will be updated with the contents which are related to help contents on this site.
+		</p>
+	</body>
+</html>
