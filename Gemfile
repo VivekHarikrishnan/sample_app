@@ -48,4 +48,5 @@ group :test do
   gem "rr", "1.0.4"
   gem "webrat", "0.7.3"
   gem "json", "1.7.3"
+  gem 'factory_girl_rails', '1.4.0'
 end
