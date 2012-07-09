@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source "http://gems.github.com"
 
 gem 'rails', '3.2.6'
 
@@ -6,9 +7,8 @@ gem 'rails', '3.2.6'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-group :development, :test do
-	gem 'mysql2'
-	gem 'rspec-rails', '2.10.0'
+group :development do
+	gem 'mysql2'	
 end
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,6 +38,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
 group :test do
-	gem 'capybara', '1.1.2'
+  gem "webmock", "1.8.7"
+  gem "rspec-rails", "2.10.0"
+  gem "rr", "1.0.4"
+  gem "webrat", "0.7.3"
+  gem "json", "1.7.3"
 end
