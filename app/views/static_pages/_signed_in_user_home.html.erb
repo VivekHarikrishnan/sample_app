@@ -1,3 +1,12 @@
+<script type="text/javascript">
+function update_content_length()
+{
+	var n = 140;
+	var element = document.getElementById('remaining_characters');
+	element.innerHTML= (n - document.getElementById("micropost_content").value.length) + " characters remaining";
+}
+</script>
+
 <div class="row">
 		<aside class="span4">
 			<section>
