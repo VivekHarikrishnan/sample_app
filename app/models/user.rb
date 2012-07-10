@@ -8,11 +8,13 @@
 #  created_at      :datetime        not null
 #  updated_at      :datetime        not null
 #  password_digest :string(255)
-#  remeber_token   :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean(1)      default(FALSE)
 #
 
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation, :admin
+  has_many :microposts, dependent: :destroy
   has_secure_password
 
   before_save { |user| user.email = email.downcase }
@@ -24,6 +26,10 @@ class User < ActiveRecord::Base
   					uniqueness: { case_sensitive: false }
   validates :password, length: {minimum: 6}
   validates :password_confirmation, presence: true
+
+  def feed
+    microposts
+  end
 
   private
 

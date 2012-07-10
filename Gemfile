@@ -46,10 +46,10 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 group :test do
-  gem "webmock", "1.8.7"
-  gem "rspec-rails", "2.10.0"
-  gem "rr", "1.0.4"
-  gem "webrat", "0.7.3"
+  gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
   gem "json", "1.7.3"
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
