@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 
   	if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Sample Application !!"
+      flash[:success] = "Welcome to Microposts !!"
   		redirect_to @user
   	else
       # flash[:error] = "There are error(s) in submitting your request"
