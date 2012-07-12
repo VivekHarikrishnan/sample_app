@@ -1,0 +1,9 @@
+<% if users.any? %>
+	<ol class="microposts">
+		<% users.each do |user| %>
+			<%= render 'search_item', user: user %>
+		<% end %>
+	</ol>
+<% else%>
+No users
+<% end %>

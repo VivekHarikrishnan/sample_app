@@ -1,0 +1,7 @@
+$(".pagination").hide();
+$(".microposts").hide();
+<% if @search_query.blank? %>
+$("#feed_header").html("<%= escape_javascript(link_to 'Home', root_path) %>")
+<% else %>
+$("#feed_header").html("<%= escape_javascript(render('search', users: @users)) %>")
+<% end %>

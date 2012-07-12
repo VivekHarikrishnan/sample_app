@@ -20,7 +20,10 @@ function update_content_length()
 			</section>
 		</aside>
 		<div class="span8">
-			<h3>Micropost Feed</h3>
+			<section>
+				<%= render 'shared/search_form' %>
+			</section>
+	        <h3 id="feed_header">Micropost Feed</h3>
 			<%= render 'shared/feed' %>
 		</div>
 </div>
